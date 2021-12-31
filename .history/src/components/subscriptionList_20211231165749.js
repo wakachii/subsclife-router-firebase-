@@ -1,0 +1,4 @@
+///サブスクのリストコンポーネント
+export const Netflix = {
+  
+}
