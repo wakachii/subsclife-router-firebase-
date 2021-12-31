@@ -1,0 +1,1 @@
+///firebaseと接続してsubscription
