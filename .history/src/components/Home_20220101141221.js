@@ -1,13 +1,14 @@
 ///Home画面
 import React, { useState, useContext, useEffect } from 'react';
-
+import { db } from "../firebase/Firebase";
+import { AuthContext } from '../auth/AuthProvider';
 import firebase from "firebase/compat/app";
 import "firebase/firestore";
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import Subscribe from './subscribe'
+import Subscribe from './subsribe';
 
-export default function Home() {
+function Home() {
   const [mypageIsOpen, mypageSetOpen] = React.useState(false);
   const [addmodalIsOpen, addmodalSetOpen] = React.useState(false);
   const [removemodalIsOpen, removemodalSetOpen] = React.useState(false);
@@ -49,7 +50,6 @@ export default function Home() {
           <div><button onClick={() => firebase.auth().signOut()}>sign out</button></div>
         </div>
       </Modal>
-      {/* 画面遷移もできるよ */}
       {/* <div className="my-3"><Link to="/add-subscription">新規登録</Link></div>
          <div className="my-4"><Link to="/edit-subscription">編集</Link></div> */}
 
@@ -93,7 +93,6 @@ export default function Home() {
 
       {/*合計金額*/}
       <h1 className='total'><div className='cost'>¥990</div>your total</h1>
-      {/* <div><Subscribe/></div> */}
     </React.Fragment>
   );
-}
+} export default Home

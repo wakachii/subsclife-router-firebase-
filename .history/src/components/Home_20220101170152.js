@@ -5,9 +5,9 @@ import firebase from "firebase/compat/app";
 import "firebase/firestore";
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import Subscribe from './subscribe'
+import Subscribe from './components/subscribe'
 
-export default function Home() {
+function Home() {
   const [mypageIsOpen, mypageSetOpen] = React.useState(false);
   const [addmodalIsOpen, addmodalSetOpen] = React.useState(false);
   const [removemodalIsOpen, removemodalSetOpen] = React.useState(false);
@@ -96,4 +96,4 @@ export default function Home() {
       {/* <div><Subscribe/></div> */}
     </React.Fragment>
   );
-}
+}  Home

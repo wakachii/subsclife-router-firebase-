@@ -9,9 +9,9 @@ import { AuthProvider } from "./auth/AuthProvider";
 import Home from "./components/Home";
 import Login from "./auth/Login";
 import SignUp from "./auth/SignUp";
-import page404 from "./components/editpages/page404"
+import page404 from "./components/page404"
 import AddSubscription from "./components/editpages/add-subscription"
-import EditSubscription from "./components/editpages/edit-subscription";
+import EditSubscription from "./components/edit-subscription";
 
 // export default App;
 class App extends React.Component{

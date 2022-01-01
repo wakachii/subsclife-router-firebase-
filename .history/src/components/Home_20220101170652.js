@@ -5,7 +5,7 @@ import firebase from "firebase/compat/app";
 import "firebase/firestore";
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import Subscribe from './subscribe'
+import Subscribe from 
 
 export default function Home() {
   const [mypageIsOpen, mypageSetOpen] = React.useState(false);

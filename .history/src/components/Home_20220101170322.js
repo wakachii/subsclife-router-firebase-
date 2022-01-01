@@ -5,7 +5,7 @@ import firebase from "firebase/compat/app";
 import "firebase/firestore";
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import Subscribe from './subscribe'
+import Subscribe from './components/subscribe'
 
 export default function Home() {
   const [mypageIsOpen, mypageSetOpen] = React.useState(false);
@@ -94,6 +94,6 @@ export default function Home() {
       {/*合計金額*/}
       <h1 className='total'><div className='cost'>¥990</div>your total</h1>
       {/* <div><Subscribe/></div> */}
-    </React.Fragment>
+    {/* </React.Fragment> */}
   );
 }

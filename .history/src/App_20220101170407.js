@@ -28,7 +28,7 @@ class App extends React.Component{
             {/* <BrowserRouter> 
                <Router>
                 <Switch>
-                <Route exact path="/" component={Home} />
+                // <Route exact path="/" component={Home} />
                 <Route path="/add-subscription/" component={AddSubscription} />
                 <Route path="/edit-subscription/" component={EditSubscription} />
                 <Route path="/404" component={page404} />
