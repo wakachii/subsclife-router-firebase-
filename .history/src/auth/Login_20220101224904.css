@@ -1,0 +1,20 @@
+.auth-form{
+      
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #34495e;
+
+/*ログインフォームのエリア内のスタイル*/
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}

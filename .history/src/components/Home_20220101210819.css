@@ -1,0 +1,264 @@
+/*チカチカする動き*/
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px rgb(190, 199, 138),
+      0 0 11px rgb(73, 80, 60),
+      0 0 19px rgb(36, 41, 38),
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  20%, 24%, 55% {
+      text-shadow: none;
+  }
+}
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://themes.googleusercontent.com/static/fonts/kaushanscript/v1/qx1LSqts-NtiKcLw4N03IFhlQWQpSCpzb2Peu3I-Q34.woff) format('woff');
+}
+
+
+.subsclife-title{ font-family: 'Kaushan Script';}
+
+
+
+.Home-subscriptionList {
+  font-family:'Kaushan Script';
+  font-size:300%;
+  margin: 10px;
+}
+/* マイページ関連ボタン */
+.to_mypage_button,.close_mypage_button{
+  --glow-color: rgb(180, 161, 197);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  outline: none;
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  width: 200px;
+  margin: 10px;
+  animation: flicker 3s infinite alternate;
+}
+.to_mypage_button::after,.close_mypage_button::after{
+    pointer-events: none;
+    content: "";
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*モーダル*/
+.user_name, .add_subscription, .remove_subscription{
+  font-size: 50px;
+  color: #fff;
+  font-family:'Kaushan Script';
+  text-decoration: underline;
+  text-align: center;
+}
+.candidates{
+  color: #fff;
+  display: flex;
+  margin:40px
+}
+
+/*ボタンについて*/
+.to_addmodal_button,.addmodal_add_button,.remove,.closeadd, .closeremove,.logout_button{
+    --glow-color: rgb(180, 161, 197);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    outline: none;
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    width: 200px;
+    margin: 10px;
+   }
+   
+   .add{
+    --glow-color: rgb(150, 219, 39);
+    --glow-spread-color: rgba(9, 161, 9, 0.781);
+    --enhanced-glow-color: rgb(115, 196, 125);
+    --btn-color: rgb(7, 43, 21);
+    animation: flicker 1.5s infinite alternate;
+   }
+   .remove{
+    --glow-color: rgb(150, 219, 39);
+    --glow-spread-color: rgba(9, 161, 9, 0.781);
+    --enhanced-glow-color: rgb(115, 196, 125);
+    --btn-color: rgb(7, 43, 21);
+    animation: flicker 10s infinite alternate;
+   }
+   
+   
+   .add::after,.remove::after,.closeadd::after, .closeremove::after, .colsemypage::after,.logout_button::after{
+    pointer-events: none;
+    content: "";
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+
+  /* hoverとactiveは共通なのでまとめる */
+   .to_mypage_button:hover,.add:hover,.remove:hover,.closeadd:hover, .closeremove:hover, .colse_mypage_button:hover,.logout_button:hover{
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   .to_mypage:active,.add:active,.remove:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body*/
+.App_body{
+  background-color: black;
+  color: white;
+}
+  .total {
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+    border-radius: 2rem;
+    text-transform: uppercase;  
+    justify-content: center;  
+    font-family: 'Exo 2', sans-serif;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+
+    text-shadow:
+        0 0 7px rgb(218, 240, 200),
+        0 0 10px rgb(201, 214, 178),
+        0 0 21px rgb(161, 202, 185),
+        0 0 42px rgb(143, 170, 161),
+        0 0 82px rgb(107, 127, 120),
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+        animation: flicker 3s infinite alternate;
+    }
+  
+
+  
+  .total::-moz-selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+  }
+  
+  .total::selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+  }
+  
+  .total:focus {
+    outline: none;
+  }
+
+/*サブスク一覧*/
+  .middle{
+  color: aliceblue;
+  font-size: 100%;
+  justify-content: center;
+  height: 100px;
+  text-align:center
+}
+.subsc{
+  background: url(522189.jpg) rgb(0, 0 , 0 , 0.3);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 100%;
+  color: white;
+  font-size: 60px;
+  font-weight: 200;
+  font-family: "Kaushan Script";
+  border-color: rgb(0, 0 , 0 , 0.8);
+  margin-top: 30px;
+  margin-left: 20px;
+  box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+}

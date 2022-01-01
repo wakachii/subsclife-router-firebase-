@@ -1,0 +1,29 @@
+/*チカチカする動き*/
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px rgb(190, 199, 138),
+      0 0 11px rgb(73, 80, 60),
+      0 0 19px rgb(36, 41, 38),
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  20%, 24%, 55% {
+      text-shadow: none;
+  }
+}
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://themes.googleusercontent.com/static/fonts/kaushanscript/v1/qx1LSqts-NtiKcLw4N03IFhlQWQpSCpzb2Peu3I-Q34.woff) format('woff');
+}
+
+.Home {
+  background-color: black;
+  color: #ffff;
+  font-: ;
+}
