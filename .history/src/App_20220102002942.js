@@ -9,11 +9,9 @@ import { AuthProvider } from "./auth/AuthProvider";
 import Home from "./components/Home";
 import Login from "./auth/Login";
 import SignUp from "./auth/SignUp";
-
-// 画面遷移先
-// import page404 from "./components/editpages/page404"
-// import AddSubscription from "./components/editpages/add-subscription"
-// import EditSubscription from "./components/editpages/edit-subscription";
+import page404 from "./components/editpages/page404"
+import AddSubscription from "./components/editpages/add-subscription"
+import EditSubscription from "./components/editpages/edit-subscription";
 
 // export default App;
 class App extends React.Component{
@@ -41,7 +39,7 @@ class App extends React.Component{
             </BrowserRouter> */}
          </Switch>
        </Router>
-       </AuthProvider>
+     </AuthProvider>
 
 </div>
   );

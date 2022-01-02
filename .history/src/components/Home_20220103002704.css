@@ -113,7 +113,7 @@
 }
 
 /* 合計金額について */
-  .total-amount {
+  .total_price {
     font-size: 20px;
     font-style: italic;
     color: #fff;
@@ -257,15 +257,15 @@ header h1
   padding: 100px 0 100px 0;
 }
 
-
-
-/* {
+.total-amount
+{
   font-size: 40px;
   width: 30%;
   padding: 10px 0 20px;
   border-bottom: solid 2px aliceblue;
   margin: 30px auto 90px auto;
-} */
+}
+
 .card-box
 {
   width: 100%;
@@ -393,6 +393,7 @@ header h1
 
 footer
 {
+  background-color: rgb(2, 2, 61);
   color: rgb(200, 200, 200);
   padding: 30px 0;
 }

@@ -6,13 +6,8 @@ import "firebase/firestore";
 // 画面遷移のためのimport
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import Header from "./Header"
-import Main from "./Main"
-import Footer from "./Footer"
 
-
-
-export default function Home() {
+function Home() {
   const [mypageIsOpen, mypageSetOpen] = React.useState(false);
   const [addmodalIsOpen, addmodalSetOpen] = React.useState(false);
   const [removemodalIsOpen, removemodalSetOpen] = React.useState(false);
@@ -40,7 +35,8 @@ export default function Home() {
 
     ///jsx関連のエラーが出るので回避のためにreact.Fragmentを使用
     <React.Fragment>
-      <Header />
+      <h1>subsclife</h1>
+
 
       {/* mypage関連*/}
       {/*ボタン*/}
@@ -98,13 +94,11 @@ export default function Home() {
 
 
       {/*合計金額*/}
+      <h1 className='total_price'>¥990your total</h1>
 
 
       {/* この後のサブスク管理のところは保留中 */}
       {/* <div><Subscribe/></div> */}
-      
-      <Main />
-      <Footer />
     </React.Fragment>
   );
 }

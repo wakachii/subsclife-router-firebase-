@@ -6,11 +6,6 @@ import "firebase/firestore";
 // 画面遷移のためのimport
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import Header from "./Header"
-import Main from "./Main"
-import Footer from "./Footer"
-
-
 
 export default function Home() {
   const [mypageIsOpen, mypageSetOpen] = React.useState(false);
@@ -40,7 +35,8 @@ export default function Home() {
 
     ///jsx関連のエラーが出るので回避のためにreact.Fragmentを使用
     <React.Fragment>
-      <Header />
+      <h1>subsclife</h1>
+
 
       {/* mypage関連*/}
       {/*ボタン*/}
@@ -54,7 +50,7 @@ export default function Home() {
           <div><button className='sign_out_button' onClick={() => firebase.auth().signOut()}>sign out</button></div>
       </Modal>
 
-
+      
       {/* 画面遷移もできる(使わなかったら削除してください) */}
       {/* <div className="my-3"><Link to="/add-subscription">新規登録</Link></div>
          <div className="my-4"><Link to="/edit-subscription">編集</Link></div> */}
@@ -98,13 +94,11 @@ export default function Home() {
 
 
       {/*合計金額*/}
+      <h1 className='total_price'>¥990your total</h1>
 
 
       {/* この後のサブスク管理のところは保留中 */}
       {/* <div><Subscribe/></div> */}
-      
-      <Main />
-      <Footer />
     </React.Fragment>
   );
 }

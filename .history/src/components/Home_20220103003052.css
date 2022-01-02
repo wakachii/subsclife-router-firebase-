@@ -113,7 +113,7 @@
 }
 
 /* 合計金額について */
-  .total-amount {
+  ..total-amount {
     font-size: 20px;
     font-style: italic;
     color: #fff;

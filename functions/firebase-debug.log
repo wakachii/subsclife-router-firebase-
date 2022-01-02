@@ -1,0 +1,43 @@
+[debug] [2022-01-01T15:06:24.631Z] ----------------------------------------------------------------------
+[debug] [2022-01-01T15:06:24.637Z] Command:       /Users/satoshiichikawa/.nodebrew/node/v16.13.0/bin/node /Users/satoshiichikawa/.nodebrew/current/bin/firebase functions:shell
+[debug] [2022-01-01T15:06:24.638Z] CLI Version:   10.0.1
+[debug] [2022-01-01T15:06:24.638Z] Platform:      darwin
+[debug] [2022-01-01T15:06:24.640Z] Node Version:  v16.13.0
+[debug] [2022-01-01T15:06:24.661Z] Time:          Sun Jan 02 2022 00:06:24 GMT+0900 (日本標準時)
+[debug] [2022-01-01T15:06:24.662Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-01-01T15:06:24.667Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-01-01T15:06:25.216Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-01-01T15:06:25.217Z] > authorizing via signed-in user (sato41kawa0707@gmail.com)
+[debug] [2022-01-01T15:06:25.219Z] [iam] checking project subsclife-74445 for permissions ["firebase.projects.get"]
+[debug] [2022-01-01T15:06:25.223Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-01-01T15:06:25.224Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-01-01T15:06:25.516Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sat, 01 Jan 2022 15:06:25 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-01-01T15:06:25.609Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/subsclife-74445:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2022-01-01T15:06:25.785Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-01-01T15:06:25.786Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-01-01T15:06:26.510Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 01 Jan 2022 15:06:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=563","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-01-01T15:06:26.547Z] [functions] Using node@16 from host.
+[debug] [2022-01-01T15:06:26.549Z] defaultcredentials: writing to file /Users/satoshiichikawa/.config/firebase/sato41kawa0707_gmail_com_application_default_credentials.json
+[debug] [2022-01-01T15:06:26.551Z] DEBUG: Setting GAC to /Users/satoshiichikawa/.config/firebase/sato41kawa0707_gmail_com_application_default_credentials.json
+[debug] [2022-01-01T15:06:26.552Z] > refreshing access token with scopes: []
+[debug] [2022-01-01T15:06:26.552Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-01-01T15:06:26.734Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sat, 01 Jan 2022 15:06:26 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-01-01T15:06:26.780Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/subsclife-74445/adminSdkConfig [none]
+[debug] [2022-01-01T15:06:27.559Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/subsclife-74445/adminSdkConfig 200
+[debug] [2022-01-01T15:06:27.559Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/subsclife-74445/adminSdkConfig {"projectId":"subsclife-74445","databaseURL":"https://subsclife-74445-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"subsclife-74445.appspot.com","locationId":"asia-northeast1"}
+[debug] [2022-01-01T15:06:27.646Z] [functions] Watching "/Users/satoshiichikawa/router-firebase/functions" for Cloud Functions...
+[debug] [2022-01-01T15:06:27.682Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2022-01-01T15:06:27.683Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2022-01-01T15:06:27.684Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2022-01-01T15:06:27.684Z] DEBUG: [worker-~diagnostic~-586df13c-ad27-421d-9394-a49c499a0f39]: Assigning socketPath: /var/folders/q8/5kwv6hkj00z41plywpbm_qxm0000gn/T/fire_emu_29848.sock
+[debug] [2022-01-01T15:06:27.685Z] DEBUG: [worker-~diagnostic~-586df13c-ad27-421d-9394-a49c499a0f39]: BUSY
+[debug] [2022-01-01T15:06:28.408Z] DEBUG: [runtime-status] [29848] Functions runtime initialized. {"cwd":"/Users/satoshiichikawa/router-firebase/functions","node_version":"16.13.0"}
+[debug] [2022-01-01T15:06:28.408Z] DEBUG: [runtime-status] [29848] Disabled runtime features: undefined
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed. This package is in your package.json, but it's not available. You probably need to run \"npm install\" in your functions directory."}}
+[debug] [2022-01-01T15:06:28.415Z] [functions] Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2022-01-01T15:06:28.435Z] DEBUG: [worker-~diagnostic~-586df13c-ad27-421d-9394-a49c499a0f39]: exited
+[debug] [2022-01-01T15:06:28.436Z] DEBUG: [worker-~diagnostic~-586df13c-ad27-421d-9394-a49c499a0f39]: FINISHED

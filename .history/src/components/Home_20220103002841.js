@@ -40,7 +40,7 @@ export default function Home() {
 
     ///jsx関連のエラーが出るので回避のためにreact.Fragmentを使用
     <React.Fragment>
-      <Header />
+<Header />
 
       {/* mypage関連*/}
       {/*ボタン*/}
@@ -98,6 +98,7 @@ export default function Home() {
 
 
       {/*合計金額*/}
+      <h1 className='total_price'>¥990 your total</h1>
 
 
       {/* この後のサブスク管理のところは保留中 */}

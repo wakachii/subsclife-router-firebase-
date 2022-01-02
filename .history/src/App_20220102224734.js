@@ -27,18 +27,7 @@ class App extends React.Component{
            <PrivateRoute exact path="/" component={Home} />
            <Route exact path="/login" component={Login} />
            <Route exact path="/signup" component={SignUp} />
-           {/* 以下でページ遷移もできます */}
-            {/* <BrowserRouter> 
-               <Router>
-                <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/add-subscription/" component={AddSubscription} />
-                <Route path="/edit-subscription/" component={EditSubscription} />
-                <Route path="/404" component={page404} />
-                <Route component={page404} />
-                </Switch>
-              </Router>
-            </BrowserRouter> */}
+
          </Switch>
        </Router>
        </AuthProvider>
