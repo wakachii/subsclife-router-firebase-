@@ -11,7 +11,7 @@ const SignUp = ({ history }) => {
   const[password, setPassword]=useState('')
 
 
-  const handleSubmit = () => {
+  const handleSubmit = => {
     // event.preventDefault();
     // const { email, password } = event.target.elements;
     signup(email, password, history);

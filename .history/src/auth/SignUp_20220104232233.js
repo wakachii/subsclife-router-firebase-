@@ -11,10 +11,10 @@ const SignUp = ({ history }) => {
   const[password, setPassword]=useState('')
 
 
-  const handleSubmit = () => {
-    // event.preventDefault();
-    // const { email, password } = event.target.elements;
-    signup(email, password, history);
+  const handleSubmit = eve => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    signup(email.value, password.value, history);
   };
 
   return (

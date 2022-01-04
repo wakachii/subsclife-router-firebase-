@@ -1,4 +1,4 @@
-import React, { useContext , useState } from "react";
+import React, { useContext } from "react";
 import { withRouter } from "react-router";
 import { Link } from 'react-router-dom';
 import { AuthContext } from "./AuthProvider";
@@ -11,10 +11,10 @@ const SignUp = ({ history }) => {
   const[password, setPassword]=useState('')
 
 
-  const handleSubmit = () => {
-    // event.preventDefault();
+  const handleSubmit =()) => {
+    event.preventDefault();
     // const { email, password } = event.target.elements;
-    signup(email, password, history);
+    signup(email.value, password.value, history);
   };
 
   return (
@@ -22,18 +22,18 @@ const SignUp = ({ history }) => {
         
         <form className="auth-form" onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
-          {/*e-mail*/} 
+          {/*e-mail*/}
           <div>
             <label>E-mail Address</label>
-            <input name="email" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="email@gmail.com" />
+            <input name="email" type="email" placeholder="email@gmail.com" />
           </div>
           {/*パスワード*/}
           <div>
             <label>Password</label>
-            <input name="password" type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="Password"/>
+            <input name="password" type="password" placeholder="Password"/>
           </div>
           {/*SignUpボタン*/}
-            <button className="signup_button" type="button" onClick={handleSubmit}>SIGN UP</button>
+            <button className="signup_button" type="submit" onClick={SignUp}>SIGN UP</button>
             <Link to="/login">SignInへ戻る</Link>
         </form>
         {/*リンク*/}

@@ -7,14 +7,14 @@ import './SignUp.css'
 const SignUp = ({ history }) => {
   const { signup } = useContext(AuthContext);
   //AuthContextからsignup関数を受け取る
-  const [email,setEmail]= useState('')
-  const[password, setPassword]=useState('')
+  // const [email,setEmail]= useState('')
+  // const[password, setPassword]=useState('')
 
 
-  const handleSubmit = () => {
-    // event.preventDefault();
-    // const { email, password } = event.target.elements;
-    signup(email, password, history);
+  const handleSubmit = event => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    signup(email.value, password.value, history);
   };
 
   return (

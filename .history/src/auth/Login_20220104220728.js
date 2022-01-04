@@ -20,7 +20,7 @@ const Login = ({ history }) => {
   return (
       <div className="auth-container">
         <form className="auth-form">
-        <h1>Login</h1>
+        <h1>Sign In</h1>
           <div className="auth-form-item">
             <label>E-mail Address</label>
             <input name="email" type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="email@gmail.com" />
