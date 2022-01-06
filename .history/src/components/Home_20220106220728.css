@@ -1,0 +1,307 @@
+/*チカチカする動き*/
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px rgb(190, 199, 138),
+      0 0 11px rgb(73, 80, 60),
+      0 0 19px rgb(36, 41, 38),
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  20%, 24%, 55% {
+      text-shadow: none;
+  }
+}
+
+
+
+/* signOutボタン */
+
+.sign_out_button{
+  --glow-color: rgb(100, 226, 68);
+  --glow-spread-color: rgba(83, 129, 40, 0.781);
+  --enhanced-glow-color: rgb(43, 170, 85);
+  --btn-color: rgb(24, 53, 35);
+  animation: flicker 1.5s infinite alternate;
+}
+
+
+  /* ボタン共通部分 */
+.sign_out_button,.close_addmodal_button,.addmodal_add_button,.to_removemodal_button,.close_removemodal_button{
+  outline: none;
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  width: 200px;
+  margin: 10px;
+}
+.to_mypage_button::after,.close_mypage_button::after,.to_addmodal_button::after,.sign_out_button::after,.close_addmodal_button::after,.addmodal_add_button::after,.to_removemodal_button::after,.close_removemodal_button::after{
+    pointer-events: none;
+    content: "";
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+.to_mypage_button:hover,.close_mypage_button:hover,.to_addmodal_button:hover,.sign_out_button:hover,.close_addmodal_button:hover,.addmodal_add_button:hover,.to_removemodal_button:hover,.close_removemodal_button:hover{
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+}
+
+/* 候補群 */
+.candidates{
+  color: #fff;
+  display: flex;
+  margin:40px
+}
+
+/* 合計金額について */
+  .total-amount {
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+    border-radius: 2rem;
+    text-transform: uppercase;  
+    justify-content: center;  
+    font-family: 'Exo 2', sans-serif;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+
+    text-shadow:
+        0 0 7px rgb(218, 240, 200),
+        0 0 10px rgb(201, 214, 178),
+        0 0 21px rgb(161, 202, 185),
+        0 0 42px rgb(143, 170, 161),
+        0 0 82px rgb(107, 127, 120),
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+        animation: flicker 3s infinite alternate;
+    }
+  .total::-moz-selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+  }
+  .total::selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+  }
+  .total:focus {
+    outline: none;
+  }
+
+h1
+{
+  font-size: 50px;
+  font-weight: 5;
+}
+
+.container
+{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header
+{
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+header h1
+{
+  width: 70%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.add-item-btn
+{
+  font-size: 60px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.add-item-btn:hover
+{
+  color: rgb(226, 76, 30);
+  transition: 0.2s ease-in-out;
+}
+
+.main-wrapper
+{
+
+  color: aliceblue;
+  text-align: center;
+  padding: 100px 0 100px 0;
+}
+
+
+
+/* {
+  font-size: 40px;
+  width: 30%;
+  padding: 10px 0 20px;
+  border-bottom: solid 2px aliceblue;
+  margin: 30px auto 90px auto;
+} */
+.card-box
+{
+  width: 100%;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+
+.item-card
+{
+  display: inline-block;
+  width: 20%;
+  margin-right: 40px;
+  text-align: center;
+  box-shadow: 0 0 6px #e8e8e8;
+  background-color: rgb(13, 17, 126);
+  cursor: pointer;
+}
+
+.item-name
+{
+  font-size: 20px;
+}
+
+.item-price
+{
+  font-size: 18px;
+}
+
+.modal
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-inner
+{
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 0;
+  width: 480px;
+  padding-bottom: 45px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+.modal-header
+{
+  width: 90%;
+  border-bottom: solid 2px black;
+  margin: 0 auto;
+}
+
+.modal-name
+{
+  font-size: 35px;
+  color: black;
+}
+
+.modal-info
+{
+  font-size: 30px;
+  color: black;
+}
+
+.modal-close-btn
+{
+  font-size: 20px;
+  color: #8491a5;
+  width: 200px;
+  padding: 16px 0;
+  border: 0;
+  background-color: #f0f4f9;
+  margin: 50px 0 0 0;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover
+{
+  color: #8491a5;
+  background-color: #ccd9ea;
+  transition: 0.2s ease-in-out;
+}
+
+.modal-addition
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-addition .modal-inner
+{
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 0;
+  width: 600px;
+  padding-bottom: 45px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+.modal-addition .modal-header
+{
+  width: 90%;
+  border-bottom: solid 2px black;
+  margin: 0 auto;
+}
+
+.modal-addition .modal-info
+{
+  font-size: 30px;
+  color: black;
+}
+
+footer
+{
+  color: rgb(200, 200, 200);
+  padding: 30px 0;
+}
+
+footer p
+{
+  font-size: 20px;
+  text-align: left;
+  margin: 0 auto;
+}
