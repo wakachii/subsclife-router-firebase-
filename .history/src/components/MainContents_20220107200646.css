@@ -1,0 +1,9 @@
+.card-container{
+  margin-left: 30px;
+  display: flex;
+}
+
+.contents-header{
+text-align: center;
+align-items: center;
+}

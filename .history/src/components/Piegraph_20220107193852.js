@@ -1,0 +1,90 @@
+import { SelectedContext } from './Addition';
+import { PieChart, Pie, Text, ResponsiveContainer } from 'recharts'
+import React from 'react';
+import Item from './Item';
+
+const  PieGraph = (props) => {
+
+  const selected = React.useContext(SelectedContext);
+
+
+  let price = [];
+  let data = [{}];
+
+  for(let i = 0; i < selected.length; i++)
+  {
+      
+      switch(selected[i])
+      {
+          case 'Amazon Prime':
+              price[i] = 500;
+              break;
+
+          case 'Youtube Premium':
+              price[i] = 1180;
+              break;
+
+          case 'Netflix':
+              price[i] = 1490;
+              break;
+
+          case 'U-NEXT':
+              price[i] = 2189;
+              break;
+
+          case 'Disney+':
+              price[i] = 990;
+              break;
+
+          case 'Apple Music':
+              price[i] = 980;
+              break;
+
+          case 'Spotify':
+              price[i] = 1280;
+              break;
+
+          case 'Kindle Unlimited':
+              price[i] = 980;
+              break;
+
+          case 'Microsoft 365':
+              price[i] = 1284;
+              break;
+
+          case 'Google Workspace':
+              price[i] = 680;
+              break;
+
+          case 'Progate':
+              price[i] = 1078;
+              break;
+
+          default:
+              break;
+      }
+      data.push({name:selected[i],price:price[i]})
+      
+  }
+  const textAnchor = x > cx ? "start" : "end";
+  const label = ({ name, value, cx, x, y }) => {
+    return (
+      <>
+    {/* 引数で付属情報を受け取れます */}
+        <Text x={x} y={y} fill="#82ca9d">{name}</Text>
+        <Text x={x} y={y} dominantBaseline="hanging" fill="#82ca9d">{value}</Text>
+      </>
+    )
+  }
+  
+     console.log(data)
+  return (
+    <>
+      <PieChart width={800} height={260}>
+           <Pie data={data} dataKey="price" cx="600" cy="130" outerRadius={100} fill="#98FB98" label={label}/>
+     </PieChart>
+    </>
+  );
+};
+
+export default PieGraph;

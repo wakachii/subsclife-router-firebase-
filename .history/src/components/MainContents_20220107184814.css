@@ -1,0 +1,8 @@
+.cardbox{
+  margin: 30px;
+}
+
+.contents-header{
+  display: flex;
+  justify-content: space-between;
+}
