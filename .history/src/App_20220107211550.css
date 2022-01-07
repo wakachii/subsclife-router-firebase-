@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+*
+{
+  box-sizing: border-box;
+}
+
+footer p
+{
+  font-size: 30px;
+  text-align: left;
+  margin: 0 auto;
+}

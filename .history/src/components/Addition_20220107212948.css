@@ -1,0 +1,82 @@
+.add-item-btn{
+
+
+  --glow-color: rgb(175, 101, 240);
+  --glow-spread-color: rgba(181, 129, 230, 0.781);
+  --enhanced-glow-color: rgb(159, 71, 241);
+  --btn-color: rgb(64, 24, 102);
+  animation: flicker 3s infinite alternate;
+
+}
+
+.savebutton{
+  --glow-color: rgb(100, 226, 68);
+  --glow-spread-color: rgba(83, 129, 40, 0.781);
+  --enhanced-glow-color: rgb(43, 170, 85);
+  --btn-color: rgb(24, 53, 35);
+  animation: flicker 1.5s infinite alternate;
+}
+.add-item-btn,.savebutton{
+
+  outline: none;
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  width: 200px;
+  margin: 10px;
+}
+
+.add-item-btn::after,.savebutton::after{
+  pointer-events: none;
+  content: "";
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+.add-item-btn:hover,.savebutton:hover{
+color: var(--btn-color);
+background-color: var(--glow-color);
+box-shadow: 0 0 1em .25em var(--glow-color),
+       0 0 4em 2em var(--glow-spread-color),
+       inset 0 0 .75em .25em var(--glow-color);
+}
+
+
+
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px rgb(190, 199, 138),
+      0 0 11px rgb(73, 80, 60),
+      0 0 19px rgb(36, 41, 38),
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  20%, 24%, 55% {
+      text-shadow: none;
+  }
+}
+
+.modal-addition{
+  color: azure;
+}
